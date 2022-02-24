@@ -43,15 +43,15 @@
     ```
 
     ### apache command
-    | command | description |
-    | :--- | :--- |
-    | sudo systemctl stop apache2 | stop apache2 |
-    | sudo systemctl start apache2 | start apache2 |
-    | sudo systemctl restart apache2 | restart apache2 |
-    | sudo systemctl reload apache2 | reload apache2 |
+    | command                        | description                                |
+    | :----------------------------- | :----------------------------------------- |
+    | sudo systemctl stop apache2    | stop apache2                               |
+    | sudo systemctl start apache2   | start apache2                              |
+    | sudo systemctl restart apache2 | restart apache2                            |
+    | sudo systemctl reload apache2  | reload apache2                             |
     | sudo systemctl disable apache2 | disable apache2 starting on system startup |
-    | sudo systemctl enable apache2 | enable apache2 starting on system startup |
-    | apache2 -v | show version of apache2 |
+    | sudo systemctl enable apache2  | enable apache2 starting on system startup  |
+    | apache2 -v                     | show version of apache2                    |
 
     ### virtual host setting (#todo)
 
@@ -201,25 +201,26 @@
     sudo nano main.cf
     ```
     change value like below
-    | before | after |
-    | :--- | :--- |
-    | #mail_owner = postfix | mail_owner = postfix |
-    | #myhostname = host.domain.tld | myhostname = mail.test.eaze |
-    | #mydomain = domain.tld | mydomain = test.eaze |
-    | #myorigin = $mydomain | myorigin = $mydomain |
-    | #inet_interfaces = all | inet_interfaces = all |
-    | #mydestination = $myhostname, localhost.$mydomain, localhost, $mydomain | mydestination = $myhostname, localhost.$mydomain, localhost, $mydomain |
-    | #local_recipient_maps = unix:passwd.byname $alias_maps | local_recipient_maps = unix:passwd.byname $alias_maps |
-    | #home_mailbox = Maildir/ | home_mailbox = Maildir/ |
-    | smtpd_banner = $myhostname ESMTP $mail_name (Ubuntu) | #smtpd_banner = $myhostname ESMTP $mail_name (Ubuntu) <br>smtpd_banner = $myhostname ESMTP |
-    | sendmail_path = | sendmail_path = /usr/sbin/postfix |
-    | newaliases_path = | newaliases_path = /usr/bin/newaliases |
-    | mailq_path = | mailq_path = /usr/bin/mailq |
-    | setgid_group = | setgid_group = postdrop |
-    | html_directory = | #html_directory = |
-    | manpage_directory = | #manpage_directory = |
-    | sample_directory = | #sample_directory = |
-    | readme_directory = | #readme_directory = |
+    
+    | before                                                                  | after                                                                                      |
+    | :---------------------------------------------------------------------- | :----------------------------------------------------------------------------------------- |
+    | #mail_owner = postfix                                                   | mail_owner = postfix                                                                       |
+    | #myhostname = host.domain.tld                                           | myhostname = mail.test.eaze                                                                |
+    | #mydomain = domain.tld                                                  | mydomain = test.eaze                                                                       |
+    | #myorigin = $mydomain                                                   | myorigin = $mydomain                                                                       |
+    | #inet_interfaces = all                                                  | inet_interfaces = all                                                                      |
+    | #mydestination = $myhostname, localhost.$mydomain, localhost, $mydomain | mydestination = $myhostname, localhost.$mydomain, localhost, $mydomain                     |
+    | #local_recipient_maps = unix:passwd.byname $alias_maps                  | local_recipient_maps = unix:passwd.byname $alias_maps                                      |
+    | #home_mailbox = Maildir/                                                | home_mailbox = Maildir/                                                                    |
+    | smtpd_banner = $myhostname ESMTP $mail_name (Ubuntu)                    | #smtpd_banner = $myhostname ESMTP $mail_name (Ubuntu) <br>smtpd_banner = $myhostname ESMTP |
+    | sendmail_path =                                                         | sendmail_path = /usr/sbin/postfix                                                          |
+    | newaliases_path =                                                       | newaliases_path = /usr/bin/newaliases                                                      |
+    | mailq_path =                                                            | mailq_path = /usr/bin/mailq                                                                |
+    | setgid_group =                                                          | setgid_group = postdrop                                                                    |
+    | html_directory =                                                        | #html_directory =                                                                          |
+    | manpage_directory =                                                     | #manpage_directory =                                                                       |
+    | sample_directory =                                                      | #sample_directory =                                                                        |
+    | readme_directory =                                                      | #readme_directory =                                                                        |
 
     ### save and restart
     ```

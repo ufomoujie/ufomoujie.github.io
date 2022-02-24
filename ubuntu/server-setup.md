@@ -208,7 +208,7 @@
     | #mydomain = domain.tld | mydomain = test.eaze |
     | #myorigin = $mydomain | myorigin = $mydomain |
     | #inet_interfaces = all | inet_interfaces = all |
-    | #mydestination = \$myhostname, localhost.$mydomain, localhost, $mydomain | mydestination = \$myhostname, localhost.$mydomain, localhost, $mydomain |
+    | #mydestination = $myhostname, localhost.$mydomain, localhost, $mydomain | mydestination = $myhostname, localhost.$mydomain, localhost, $mydomain |
     | #local_recipient_maps = unix:passwd.byname $alias_maps | local_recipient_maps = unix:passwd.byname $alias_maps |
     | #home_mailbox = Maildir/ | home_mailbox = Maildir/ |
     | smtpd_banner = $myhostname ESMTP $mail_name (Ubuntu) | #smtpd_banner = $myhostname ESMTP $mail_name (Ubuntu) <br>smtpd_banner = $myhostname ESMTP |

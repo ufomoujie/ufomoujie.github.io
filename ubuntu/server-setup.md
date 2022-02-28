@@ -53,7 +53,24 @@
     | sudo systemctl enable apache2  | enable apache2 starting on system startup  |
     | apache2 -v                     | show version of apache2                    |
 
-    ### virtual host setting (#todo)
+    ### enable .htaccess file
+    /etc/apache2/sites-available/000-default.conf  default-ssl.conf
+    AllowOverride setting
+    ```
+    <Directory /var/www/html>
+        Options Indexes FollowSymLinks
+        AllowOverride All
+        Require all granted
+    </Directory>
+    ```
+    enable rewrite
+    ```
+    sudo a2enmod rewrite
+    ```
+    restart apache2
+    ```
+    sudo systemctl restart apache2
+    ```
 
 
 - ## MariaDB
@@ -134,7 +151,12 @@
     memory_limit = 256M
     max_execution_time = 600
     max_input_vars = 1000
-    max_input_time = 60
+    max_input_time = 60    
+    ```
+    enable display errros
+    ```
+    display_errors = on
+    display_startup_errors = On
     ```
 
 - ## phpmyadm
@@ -247,7 +269,7 @@
     mapserv -v
     ```
 
-- ## Install Smba on Linux and share files with Windows
+- ## Install Samba on Linux and share files with Windows
     ```
     sudo apt install samba
     ```

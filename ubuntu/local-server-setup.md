@@ -1,5 +1,10 @@
 # ubuntu local server setup
 
+- ##  update apt to the latest version
+    ```
+    sudo apt update
+    sudo apt upgrade
+    ```
 - ## Japanese environment setting
     install japanese language pack
     ```
@@ -19,12 +24,6 @@
     ```
     sudo dpkg-reconfigure tzdata
     ```
-- ##  update apt to the latest version
-    ```
-    sudo apt update
-    sudo apt upgrade
-    ```
-
 - ## Apache2
     install apache2
     ```

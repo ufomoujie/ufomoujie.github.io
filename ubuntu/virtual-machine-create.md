@@ -7,22 +7,22 @@
   ```
 - ## install file
   - Open vmware and click the button as shown below
-  ![Ubuntu local server setup](./../image/create%20a%20virtual%20machine.png) 
+  ![create-a-virtual-machine](./../image/create-a-virtual-machine.png) 
 
   - Select the downloaded installation file as shown below
-  ![Ubuntu local server setup](./../image/select%20installation%20file.png) 
+  ![select-installation-file](./../image/select-installation-file.png) 
 
   - input the information as shown below
-  ![Ubuntu local server setup](./../image/input%20the%20information.png) 
+  ![input-the-information](./../image/input-the-information.png) 
   
   - input the virtual machine name and select the save path <br>
 
   - input the disk size as you want and select the `Split the virtual disk into multiple files` as shown below
-  ![Ubuntu local server setup](./../image/input%20the%20disk%20size.png) 
+  ![input-the-disk-size](./../image/input-the-disk-size.png) 
 
   - Confirm the information and change the Network adapter. <br>
     change from `NAT` TO `bridge` as shown below
-    ![Ubuntu local server setup](./../image/network%20adapter.png) 
+    ![network-adapter](./../image/network-adapter.png) 
 
   - Use UP, DOWN and ENTER keys to select your language.<br>
 
@@ -31,7 +31,7 @@
     Fixed IP config<br>
     `ens33` > `Edit IPv4` > `IPv4 Method: Manual`
     config as shown below
-    ![Ubuntu local server setup](./../image/IPv4%20configuration.png) 
+    ![IPv4-configuration](./../image/IPv4-configuration.png) 
 
   - configure proxy<br>
     if you do not need to make any settings, just select `Done` and press the `Enter` key.
@@ -45,11 +45,11 @@
 
   - profile setup<br>
     set as shown below
-    ![Ubuntu local server setup](./../image/profile%20setup.png) 
+    ![profile-setup](./../image/profile-setup.png) 
 
   - SSH Setup<br>
     config as shown below
-    ![Ubuntu local server setup](./../image/ssh%20config.png) 
+    ![ssh-config](./../image/ssh-config.png) 
 
   - Featured server snaps<br>
     check what you want

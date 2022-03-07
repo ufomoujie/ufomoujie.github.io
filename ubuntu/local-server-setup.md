@@ -24,6 +24,10 @@
     ```
     sudo dpkg-reconfigure tzdata
     ```
+- ## logrotate
+    ```
+    sudo apt install logrotate
+    ```
 - ## Apache2
     install apache2
     ```
@@ -66,9 +70,20 @@
     ```
     sudo a2enmod rewrite
     ```
-    restart apache2
+    ### change log dir 
+    /etc/apache2/envvars
+    ```
+    export APACHE_LOG_DIR=/var/www/tmp/httpd
+    ```
+    set logrotate 
+    ```
+    #/var/log/apache2/*.log
+    /var/www/tmp/httpd/*.log
+    ```
+    restart apache2 and logrotate
     ```
     sudo systemctl restart apache2
+    sudo systemctl restart logrotate
     ```
 
 
@@ -131,6 +146,7 @@
     ```
 
     access by user and password
+    change `admin` to your user name
     ```
     mysqladmin -u admin -p version
     ```
@@ -152,6 +168,7 @@
     max_input_vars = 1000
     max_input_time = 60    
     ```
+    /etc/php/7.4/apache2/php.ini<br>
     enable display errros
     ```
     display_errors = on
@@ -199,7 +216,7 @@
         
     install cockpit
     ```
-    sudo apt isntall cockpit
+    sudo apt install cockpit
     ```
 
     ## test cockpit
@@ -253,12 +270,6 @@
     sudo nano /etc/aliases
     root: watch@test.eaze
     ```
-
-- ## logrotate
-    ```
-    sudo apt install logrotate
-    ```
-
 - ## lgis mapserver
     ```
     sudo apt install cgi-mapserver php-mapscript
@@ -276,16 +287,20 @@
     ```
     sudo chmod 777 /var/www
     ```
-    add system user and set to samba
+    add system user 
     ```
     sudo adduser share
+    ```
+    set samba user
+    ```
     sudo pdbedit -a share
     ```
     configuration
+    Add the configuration to the end of the file line
     ```
     sudo nano /etc/samba/smb.conf
 
-    [share]
+    [WWW]
        path = /var/www/
        writable = yes
        valid users = share
@@ -301,6 +316,7 @@
     ```
 
 - ## rsync file from another server
+    change  `x.x.x.x` to your remote  server ip address.
     ```
     rsync -rt root@x.x.x.x:/home/directory /home
     ```

@@ -76,9 +76,12 @@
     export APACHE_LOG_DIR=/var/www/tmp/httpd
     ```
     set logrotate 
+    /etc/logrotate.d/apache2
     ```
     #/var/log/apache2/*.log
     /var/www/tmp/httpd/*.log
+
+    create 644 root adm
     ```
     restart apache2 and logrotate
     ```

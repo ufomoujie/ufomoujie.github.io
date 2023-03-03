@@ -236,9 +236,9 @@
     - choose the `Internet Site`
     - System mail name: `test.eaze`
 
-    /usr/share/postfix/main.cf
+    /etc/postfix/main.cf
     ```
-    sudo cp main.cf.dist main.cf
+    sudo cp /usr/share/postfix/main.cf.dist /etc/postfix/main.cf
     sudo nano main.cf
     ```
     change value like below

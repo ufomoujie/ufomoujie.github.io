@@ -68,15 +68,14 @@
                 alert(navigator.platform);
                 if (/^iPad|iPhone$/.test(navigator.platform)) {
                     alert(1);
-                    var inputs = document.getElementsByTagName('form').querySelectorAll('input[type="radio"], input[type="checkbox"]');
-                    inputs.forEach(i => {
-                        i.addEventListener('focus', function (e) {
-                            e.target.scrollIntoView({
+                    var inputs = $('form').find('input[type="radio"], input[type="checkbox"]');
+                    inputs.focus(function(){
+                        this.scrollIntoView({
                                 block: 'center',
                                 behavior: "smooth"
                             });
-                        })
-                    })
+                    });
+                    
                 }
             });
             

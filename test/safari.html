@@ -75,7 +75,7 @@
         <script>
             $(document).ready(function(){
                 if (/^iPad|iPhone$/.test(navigator.platform) || (navigator.userAgent.match(/Mac/) && navigator.maxTouchPoints && navigator.maxTouchPoints > 2)) {
-                    var inputs = $('form').find('input[type="radio"], input[type="checkbox"]');
+                    var inputs = $('form').find('input[type="radio"], input[type="checkbox"], select');
                     inputs.focus(function(){
                         this.scrollIntoView({
                                 block: 'center',

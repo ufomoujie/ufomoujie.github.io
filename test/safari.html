@@ -11,6 +11,11 @@
     </head>
     <body>
         <form name="myForm" id="myForm"method="post"> 
+            <select name="s1" required>
+                <option >sel</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+            </select>
             <legend>Question 1</legend>
             <div>
                 <input type="radio" id="q1_1" name="question1" value="1a" required>
@@ -40,7 +45,11 @@
                 <input type="radio" id="q3_2" name="question3" value="1b" required>
                 <label for="q3_2">1a</label>
             </div>
-
+            <select name="s2" required>
+                <option >sel</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+            </select>
 
             <legend style="margin-top: 300px;">Question 4</legend>
             <div>
@@ -65,9 +74,7 @@
         </form>
         <script>
             $(document).ready(function(){
-                alert(navigator.platform);
                 if (/^iPad|iPhone$/.test(navigator.platform) || (navigator.userAgent.match(/Mac/) && navigator.maxTouchPoints && navigator.maxTouchPoints > 2)) {
-                    alert(1);
                     var inputs = $('form').find('input[type="radio"], input[type="checkbox"]');
                     inputs.focus(function(){
                         this.scrollIntoView({

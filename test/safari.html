@@ -65,7 +65,9 @@
         </form>
         <script>
             $(document).ready(function(){
+                alert(navigator.platform);
                 if (/^iPad|iPhone$/.test(navigator.platform)) {
+                    alert(1);
                     var inputs = document.getElementsByTagName('form').querySelectorAll('input[type="radio"], input[type="checkbox"]');
                     inputs.forEach(i => {
                         i.addEventListener('focus', function (e) {
